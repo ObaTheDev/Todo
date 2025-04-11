@@ -158,6 +158,9 @@ export default function ToDo() {
               >
                 <h3 className="font-bold text-lg">{todo.title}</h3>
                 <p className="text-sm text-gray-600 dark:text-gray-300">{todo.description}</p>
+                <Button size="sm" variant="outline" className="mt-4 mb-4" onClick={() => editTodo(todo.id)}>
+                    <Edit className="h-4 w-4 " />
+                  </Button>
                 <div className="flex items-center gap-2 mt-2 text-sm">
                   <span
                     className={`px-2 py-2 rounded-md ${
@@ -190,9 +193,7 @@ export default function ToDo() {
                   <Button size="sm" variant="destructive" onClick={() => deleteTodo(todo.id)}>
                     <Trash className="h-4 w-4" />
                   </Button>
-                  <Button size="sm" variant="outline" onClick={() => editTodo(todo.id)}>
-                    <Edit className="h-4 w-4" />
-                  </Button>
+
                 </div>
               </div>
             ))
