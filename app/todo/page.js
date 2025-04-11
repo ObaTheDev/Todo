@@ -160,7 +160,7 @@ export default function ToDo() {
                 <p className="text-sm text-gray-600 dark:text-gray-300">{todo.description}</p>
                 <div className="flex items-center gap-2 mt-2 text-sm">
                   <span
-                    className={`px-4 py-2 rounded-md ${
+                    className={`px-2 py-2 rounded-md ${
                       todo.status === "done"
                         ? "bg-green-300"
                         : todo.status === "in progress"
