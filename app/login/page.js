@@ -17,15 +17,14 @@ const Login = () => {
             return;
         }
         // Handle form submission logic here
-        console.log("Submitted:", { username, email, password });
         setError(null); // Clear any previous error messages
         router.push("/todo"); // Redirect to home page after successful submission
     };
 
     return (
         <div className='flex justify-center items-center text-center h-screen'>
-            <div className="w-[50%] justify-center items-center flex h-[60%] py-4 m-auto text-center bg-blue-900 rounded-md">
-                <div className="text-white">
+            <div className="md:w-[50%] lg:w-[50%] w-[90%] justify-center items-center flex h-[60%] py-4 m-auto text-black text-center  bg-[#F0F7EE] rounded-md">
+                <div className="text-black">
                         {error && (
                             <div className="text-red-400 text-lg  text-center mb-8">
                             {error}
@@ -36,7 +35,7 @@ const Login = () => {
                         className="flex text-center flex-col gap-3"
                         onSubmit={handleSubmit}
                     >
-                        <div className="flex flex-col gap-7 text-left">
+                        <div className="flex flex-col gap-7 lg:text-left  md:text-left">
                             <div>
                                 <label className='mr-3' htmlFor="username">Username: </label>
                                 <input
@@ -46,7 +45,7 @@ const Login = () => {
                                     placeholder="Johnny"
                                     value={username}
                                     onChange={(e) => setUsername(e.target.value)}
-                                    className="w-[300px] border border-slate-200 rounded-lg py-1 px-5 outline-none bg-transparent"
+                                    className="w-[300px] border border-gray-800 rounded-lg py-1 px-5 outline-none bg-transparent"
                                 />
                             </div>
                             <div>
@@ -58,7 +57,7 @@ const Login = () => {
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
                                     placeholder="emailaddress@gmail.com"
-                                    className="w-[300px] border border-slate-200 rounded-lg py-1 px-5 outline-none bg-transparent"
+                                    className="w-[300px] border border-gray-800 rounded-lg py-1 px-5 outline-none bg-transparent"
                                 />
                             </div>
                             <div>
@@ -70,7 +69,7 @@ const Login = () => {
                                     value={password}
                                     onChange={(e) => setPassword(e.target.value)}
                                     placeholder=".........."
-                                    className="w-[300px] border border-slate-200 rounded-lg py-1 px-5 outline-none bg-transparent"
+                                    className="w-[300px] border border-gray-800 rounded-lg py-1 px-5 outline-none bg-transparent"
                                 />
                             </div>
                         </div>
@@ -81,7 +80,7 @@ const Login = () => {
                                 "
                                 type="submit"
                                 value="Submit"
-                                className="px-6 border mt-5 bg-[#41404D] border-slate-200 rounded-lg py-3 outline-none cursor-pointer"
+                                className="px-6 border mt-5 bg-[#AFDEDC] border-gray-800 rounded-lg py-3 outline-none cursor-pointer"
                             />
                         </div>
                     </form>
