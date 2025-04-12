@@ -51,7 +51,7 @@ const Login = () => {
                             <div>
                                 <label htmlFor="email" className='mr-3'>Email Address:</label>
                                 <input
-                                    type="text"
+                                    type="email"
                                     id="emailAddress"
                                     name="email"
                                     value={email}
